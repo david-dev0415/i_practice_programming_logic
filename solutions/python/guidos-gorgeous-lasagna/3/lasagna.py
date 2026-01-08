@@ -1,0 +1,54 @@
+"""Functions used in preparing Guido's gorgeous lasagna.
+
+Learn about Guido, the creator of the Python language:
+https://en.wikipedia.org/wiki/Guido_van_Rossum
+
+This is a module docstring, used to describe the functionality
+of a module and its functions and/or classes.
+"""
+
+#TODO: define your EXPECTED_BAKE_TIME (required) and PREPARATION_TIME (optional) constants below.
+EXPECTED_BAKE_TIME = 40
+PREPARATION_TIME = 2
+
+#TODO: Remove 'pass' and complete the 'bake_time_remaining()' function below.
+def bake_time_remaining(elapsed_bake_time:int):
+    """Calculate the bake time remaining.
+
+    :param elapsed_bake_time: int - baking time already elapsed.
+    :return: int - remaining bake time (in minutes) derived from 'EXPECTED_BAKE_TIME'.
+
+    Function that takes the actual minutes the lasagna has been in the oven as
+    an argument and returns how many minutes the lasagna still needs to bake
+    based on the `EXPECTED_BAKE_TIME`.
+    """
+    return EXPECTED_BAKE_TIME - elapsed_bake_time 
+
+#TODO: define the 'preparation_time_in_minutes()' function below.
+def preparation_time_in_minutes(number_of_layers: int):
+    """Preparation time minutes
+
+    :param number_of_layers: int - number of layers in the lasagna
+
+    Function that takes number of layers and will tell you how long the lasagna takes to make, 
+    based on the number of layers and the time per layer (PREPARATION_TIME).
+    """
+    return number_of_layers * PREPARATION_TIME
+
+#TODO: define the 'elapsed_time_in_minutes()' function below.
+def elapsed_time_in_minutes(number_of_layers: int, baked_minutes: int):
+
+    """ Elapsed time in minutes
+
+    :param number_of_layers: int - number of layers in the lasagna
+    :param baked_minutes: int - the time it has been in the oven in minutes
+
+    Function that takes two parameters, number of layers and baked minutes. Will tell you
+    the time reaming.
+    """
+    elapsed_time = preparation_time_in_minutes(number_of_layers) + baked_minutes
+    return elapsed_time
+
+
+# TODO: Remember to go back and add docstrings to all your functions
+#  (you can copy and then alter the one from bake_time_remaining.)
